@@ -39,7 +39,7 @@ jobs:
     strategy:
       matrix:
         include:
-          - image: fabiankoehler/archlinux-ansible:latest
+          # - image: fabiankoehler/archlinux-ansible:latest
           - image: geerlingguy/docker-centos8-ansible:latest
           - image: geerlingguy/docker-debian10-ansible:latest
           - image: geerlingguy/docker-debian11-ansible:latest
