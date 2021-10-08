@@ -5,11 +5,11 @@
   notify:
     - Restart haveged.
 
-- name: Flush handlers.
-  ansible.builtin.meta: flush_handlers
-
 - name: Start haveged.
   ansible.builtin.service:
     name: haveged
     state: started
     enabled: yes
+
+- name: Flush handlers.
+  ansible.builtin.meta: flush_handlers
