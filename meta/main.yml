@@ -1,7 +1,7 @@
 galaxy_info:
   role_name: haveged
   author: f_koehler
-  description: Install and start Docker
+  description: Install and start haveged
   license: license (MIT)
   min_ansible_version: 2.5
   platforms:

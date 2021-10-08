@@ -21,6 +21,6 @@
       changed_when: false
       failed_when: systemctl_status.rc > 1
   tasks:
-    - name: Include docker role.
+    - name: Include haveged role.
       ansible.builtin.include_role:
         name: "f_koehler.haveged"
