@@ -1,0 +1,15 @@
+- name: Install haveged.
+  ansible.builtin.package:
+    name: haveged
+    state: present
+  notify:
+    - Restart haveged.
+
+- name: Flush handlers.
+  ansible.builtin.meta: flush_handlers
+
+- name: Start haveged.
+  ansible.builtin.service:
+    name: haveged
+    state: started
+    enabled: yes

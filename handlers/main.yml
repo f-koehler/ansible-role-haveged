@@ -1,0 +1,4 @@
+- name: Restart haveged.
+  ansible.builtin.service:
+    name: haveged
+    state: restarted
