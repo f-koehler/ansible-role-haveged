@@ -9,6 +9,11 @@
         cache_valid_time: 600
       when: ansible_os_family == "Debian"
       changed_when: false
+    - name: Update pacman cache.
+      community.general.pacman:
+        update_cache: true
+      when: ansible_distribution == "Archlinux"
+      changed_when: false
     - name: Wait for systemd initialization. # noqa command-instead-of-module
       ansible.builtin.command: systemctl is-system-running
       register: systemctl_status
